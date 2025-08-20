@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>نموذج التسجيل في الدورة</title>
+</head>
+<body>
+
+<h1 style="text-align:center;">التسجيل في الدورة التدريبية</h1>
+<hr>
+
+<form action="submit.php" method="post" enctype="multipart/form-data">
+
+    <label for="name">الاسم الكامل:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">البريد الإلكتروني:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">كلمة المرور:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="phone">رقم الهاتف:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{9,15}" placeholder="رقم من 9 إلى 15 رقم"><br><br>
+
+    <label for="age">العمر:</label><br>
+    <input type="number" id="age" name="age" min="10" max="80"><br><br>
+
+    <label for="file">رفع صورة الهوية:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+    <input type="checkbox" id="agree" name="agree" value="yes" required>
+    <label for="agree">أوافق على الشروط والأحكام</label><br><br>
+
+    <label for="country">اختر الدولة:</label><br>
+    <select id="country" name="country">
+        <option value="yemen" selected>اليمن</option>
+        <option value="saudi">السعودية</option>
+        <option value="egypt">مصر</option>
+        <option value="uae">الإمارات</option>
+    </select><br><br>
+
+    <label for="browser">اختر متصفحك المفضل:</label><br>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Microsoft Edge">
+        <option value="Safari">
+        <option value="Opera">
+    </datalist><br><br>
+
+    <h2>🌐 اختيار لغة التدريس</h2>
+    <input type="radio" id="arabic" name="language" value="arabic" checked>
+    <label for="arabic">العربية</label><br>
+
+    <input type="radio" id="english" name="language" value="english">
+    <label for="english">الإنجليزية</label><br>
+
+    <input type="radio" id="french" name="language" value="french">
+    <label for="french">الفرنسية</label><br><br>
+
+    <label for="message">اكتب رسالتك:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40" placeholder="اكتب هنا..."></textarea><br><br>
+
+    <input type="submit" value="إرسال">
+    <input type="reset" value="مسح">
+    <button type="button" id="edit">تعديل</button>
+    <button type="button" id="cancel">إلغاء</button>
+    <button type="button" id="print">طباعة</button>
+
+</form>
+
+</body>
+</html>

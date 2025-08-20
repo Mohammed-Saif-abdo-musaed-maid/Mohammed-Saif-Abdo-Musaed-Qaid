@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الدورات التدريبية في البرمجة</title>
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3f37c9;
+      --accent: #4895ef;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #4cc9f0;
+      --warning: #f72585;
+    }
+
+    body {
+      background-color: var(--light);
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--dark);
+      line-height: 1.6;
+      box-sizing: border-box; /* 🟢 box-sizing */
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit; /* 🟢 يجعل كل العناصر تتبع نفس النظام */
+    }
+
+    h1 {
+      text-align: center;
+      background: linear-gradient(to right, var(--primary), var(--warning));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* 6. FLOAT */
+    .course-card {
+      float: right; /* 🟢 float */
+      width: 45%;
+      margin: 1rem;
+      padding: 1rem;
+      background: white;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    /* 🟢 clear */
+    .clearfix {
+      clear: both;
+    }
+
+    /* 7. POSITION */
+    .sticky-header {
+      position: sticky; /* 🟢 position */
+      top: 0;
+      background: var(--secondary);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      z-index: 10;
+    }
+
+    /* 8. OVERFLOW */
+    .scroll-box {
+      width: 90%;
+      max-height: 150px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 2px dashed var(--accent);
+      border-radius: 10px;
+      overflow-y: auto; /* 🟢 overflow */
+      background: #fff;
+    }
+
+    /* 9. Pseudo classes */
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover { /* 🟢 pseudo class */
+      color: var(--warning);
+      text-decoration: underline;
+    }
+
+    button:active { /* 🟢 pseudo class */
+      transform: scale(0.95);
+    }
+
+    input:disabled { /* 🟢 pseudo class */
+      background: #ddd;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-header">
+    ✨ أهلاً بك في مركز الدورات التدريبية
+  </div>
+
+  <h1>موقع الدورات التدريبية في البرمجة 🚀</h1>
+
+  <!-- قسم باستخدام float -->
+  <div class="course-card">
+    <h2>HTML & CSS</h2>
+    <p>مدة الدورة: 4 أسابيع</p>
+    <p>السعر: $50</p>
+  </div>
+
+  <div class="course-card">
+    <h2>JavaScript</h2>
+    <p>مدة الدورة: 6 أسابيع</p>
+    <p>السعر: $70</p>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <!-- قسم overflow -->
+  <div class="scroll-box">
+    <p>📌 ملاحظة: المقاعد محدودة، سارع بالتسجيل!</p>
+    <p>🚀 التدريب يقدم عبر الإنترنت وكذلك حضورياً.</p>
+    <p>🌍 اللغات المتاحة: العربية، الإنجليزية، الفرنسية.</p>
+    <p>✅ شهادة معتمدة بعد إكمال الدورة.</p>
+    <p>💡 خصم خاص للطلاب الجامعيين.</p>
+    <p>🎓 يوجد اختبار نهائي لكل دورة.</p>
+  </div>
+
+  <p style="text-align:center">
+    <a href="#">تصفح جميع الدورات</a>
+  </p>
+
+  <div style="text-align:center; margin-top:2rem;">
+    <button>تسجيل</button>
+    <button disabled>مغلق</button>
+  </div>
+
+</body>
+</html>

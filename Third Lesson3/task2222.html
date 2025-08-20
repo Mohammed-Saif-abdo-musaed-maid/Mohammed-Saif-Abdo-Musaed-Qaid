@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شرح display في CSS</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #3f37c9;
+      margin-top: 40px;
+    }
+
+    /* 1️⃣ inline */
+    .inline-demo span {
+      display: inline;
+      background: #f72585;
+      color: white;
+      padding: 5px;
+      margin: 3px;
+    }
+
+    /* 2️⃣ block */
+    .block-demo div {
+      display: block;
+      background: #4895ef;
+      color: white;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    /* 3️⃣ inline-block */
+    .inline-block-demo div {
+      display: inline-block;
+      width: 100px;
+      height: 80px;
+      background: #4cc9f0;
+      margin: 5px;
+      text-align: center;
+      line-height: 80px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* 4️⃣ flex */
+    .flex-demo {
+      display: flex;
+      gap: 10px;
+      background: #eee;
+      padding: 15px;
+      border: 2px dashed #ccc;
+      justify-content: center; /* وسط العناصر أفقياً */
+      align-items: center;    /* وسط العناصر عمودياً */
+    }
+    .flex-demo div {
+      background: #4361ee;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    /* 5️⃣ grid */
+    .grid-demo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .grid-demo div {
+      background: #3f37c9;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>شرح خصائص display في CSS 🎨</h1>
+
+  <!-- 1️⃣ display: inline -->
+  <h2>1️⃣ display: inline</h2>
+  <div class="inline-demo">
+    <span>نص 1</span>
+    <span>نص 2</span>
+    <span>نص 3</span>
+    <span>نص 4</span>
+  </div>
+  <p>👉 العناصر تبقى في نفس السطر ولا تبدأ من سطر جديد.</p>
+
+  <!-- 2️⃣ display: block -->
+  <h2>2️⃣ display: block</h2>
+  <div class="block-demo">
+    <div>مربع 1</div>
+    <div>مربع 2</div>
+    <div>مربع 3</div>
+  </div>
+  <p>👉 كل عنصر block يأخذ السطر كامل لحاله.</p>
+
+  <!-- 3️⃣ display: inline-block -->
+  <h2>3️⃣ display: inline-block</h2>
+  <div class="inline-block-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+  <p>👉 العناصر تظهر بجانب بعض مثل inline لكن تقدر تعطيها عرض وارتفاع.</p>
+
+  <!-- 4️⃣ display: flex -->
+  <h2>4️⃣ display: flex</h2>
+  <div class="flex-demo">
+    <div>📦 1</div>
+    <div>📦 2</div>
+    <div>📦 3</div>
+  </div>
+  <p>👉 flex يعطيك تحكم كامل في توزيع العناصر واتجاهها (أفقي/عمودي).</p>
+
+  <!-- 5️⃣ display: grid -->
+  <h2>5️⃣ display: grid</h2>
+  <div class="grid-demo">
+    <div>خانة 1</div>
+    <div>خانة 2</div>
+    <div>خانة 3</div>
+    <div>خانة 4</div>
+    <div>خانة 5</div>
+    <div>خانة 6</div>
+  </div>
+  <p>👉 grid مناسب لتقسيم الصفحة إلى شبكة من الأعمدة والصفوف.</p>
+
+</body>
+</html>

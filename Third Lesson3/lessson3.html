@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>1التطبيق الثالث </title>
+</head>
+
+<body dir="rtl">
+    <!-- table -->
+    <!--
+    caption= وسم لعمل  عنوان للجدول 
+border =لعمل حدود للجدول 
+rowspan=دمج الخلايا عمودي
+colspan=دمج الخلايا افقي
+td=لعمل خلية
+th=لعمل صف 
+legend=
+     -->
+    <table border="2">
+        <caption>
+            بيانات التسجيل
+        </caption>
+        <tr>
+            <th colspan="2">الرقم</th>
+            <td>
+                1
+            </td>
+        </tr>
+        <th colspan="2">الاسم</th>
+        <td>احمد </td>">
+        <tr>
+            <th rowspan="2">العنوان </th>
+        </tr>
+        <th>المدينة</th>
+        <td>إب</td>
+        <tr>
+            <th>الشارع</th>
+        </tr>
+        <td>الدئري </td>
+        <hr>
+    </table>
+
+    <div>
+        <table border="1">
+            <caption>بيانات التسجيل</caption>
+            <tr>
+                <th rowspan="2">الاسم</th>
+            <tr rowspan="2">العمر</tr>
+            <th colspan="2">العنوان</th>
+
+            </tr>
+            <tr>
+                <th>المدينة</th>
+                <th>الشارع</th>
+            </tr>
+            <tr>
+                <td>احمد</td>
+                <td>22</td>
+                <td>إب</td>
+                <td>تعز</td>
+            </tr>
+            <tr colspan="4"></tr>
+
+        </table>
+    </div>
+    <hr>
+    <audio controls autoplay loop muted>
+        <source src="001.mp3" type="audio/mp3">
+        <source src="Al_Ikhlas_-_coran.mp3" type="audio/wav">
+        <source src="001.mp3" type="audio/ogg">
+        the web on support this audio
+
+    </audio>
+    <hr>
+    <video controls loop muted width="500" height="300" poster="IMG_4163.JPG">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        the web no support this audio
+
+
+    </video>
+    <hr>
+    <hr>
+    <form action="index.php" method="get" autocomplete="on" enctype="multipart/form-data">
+        <fieldset>
+            <legend>
+                استمارت تسجيل في دورة صيانة موبايل
+            </legend>
+            <div>
+                <lable for="std_name">اسم الطالب:</lable>
+                <input type="text" required id="std_name" placeholder="اكتب اسمك">
+
+            </div>
+            <div>
+                <label for="std_age">العمر:</label>
+                <input type="Number" required id="std_age" maxlength="2" min="10">
+
+            </div>
+            <div>
+                <label>الجنس</label>
+                <input type="radio" required id="male" name="gender" value="ذكر" checked>
+                <label for="male">ذكر</label>
+                <input type="radio" required id="female" name="gender" value="انثى">
+                <label for="female">انثى</label>
+
+            </div>
+            <div>
+                <label for="std_img">الصورة الشخصية:</label>
+                <input type="file" id="std_image">
+
+            </div>
+            <div>
+                <label for="std_edu">المؤهل العلمي</label>
+                <input type="text" required id="std_edu" list="list_edu">
+                <datalist id="list_edu">
+
+
+                    <option value="بكالاريوس"></option>
+                    <OPTION valur="ماجستير"></OPTION>
+
+                    <OPTION value="دكتورة "></OPTION>
+                    <option value="ثانوي"></option>
+                </datalist>
+
+            </div>
+            <DIV>
+                <label for="std_year">سنة التخرج:</label>
+                <select id="std_year">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+
+                </select>
+
+            </DIV>
+            <div><label for="std_color">لونك المفضل</label>
+                <input type="color" id="std_color">
+
+            </div>
+            <div>
+                <b>اللغات البرمجية المستخدمة</b>
+                <input type="checkbox" value="c++" id="pro1">
+                <label for="pro1">c++</label><br>
+                <input type="checkbox" value="c#" id="pro2">
+                <label for="pro2">c#</label>
+                <input type="checkbox" value="python" id="pro3">
+                <label for="pro3">python</label>
+                <input type="checkbox" value="php" id="pro4">
+                <label for="pro4">php</label>
+                <input type="checkbox" value="dart" id="pro5">
+                <label for="pro5">dart</label>
+            </div>
+            </div>
+            <div>
+                <label for="std_am">الفترة:</label>
+                <input type="radio " id="mor" name="std_am" value="صباحا" checked>
+                <label for="mor">صباحا</label>
+                <input type="radio " id="eve" name="std_am" value="مساء " checked>
+                <label for="eve">مساء</label>
+
+            </div>
+            <hr>
+            <div>
+                <label>رسالة </label>
+
+                <textarea name="message" rows="6" cols="50" placeholder="اكتب رسالتك هنا............  "></textarea>
+
+            </div>
+
+            <div>
+                <input type="submit" value="تسجيل" id="register">
+                <input type="reset" value="الغاء" id="cancle">
+                <button id="edit">تعديل</button>
+                <button id="show">عرض</button>
+                <button id="print">طباعة</button>
+
+
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

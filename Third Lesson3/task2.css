@@ -1,0 +1,139 @@
+
+body {
+    background-color: #eef2f7; /* لون خلفية خفيف */
+    background-image: url('background.jpg'); /* صورة خلفية */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* لون النص */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #2c3e50; /* لون جذاب */
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #16a085; /* لون أخضر مميز */
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* الفقرات والنصوص */
+p, label, td, th {
+    font-size: 1rem;
+    color: #34495e; /* نص داكن لطيف للقراءة */
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* الفورم */
+form {
+    background-color: #ffffff; /* خلفية بيضاء نظيفة */
+    border: 2px solid #16a085; /* حافة باللون الأخضر */
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* تأثير ظل لطيف */
+}
+
+/* الحقول داخل الفورم */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #1abc9c;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #e67e22; /* تغير لون الحافة عند التركيز */
+    box-shadow: 0 0 5px rgba(230,126,34,0.5);
+}
+
+/* أزرار */
+input[type="submit"], input[type="reset"], button {
+    background-color: #e67e22; /* برتقالي جذاب */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: #d35400; /* تغيير اللون عند المرور */
+    transform: scale(1.05);
+}
+
+/* الجداول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: inherit;
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #1abc9c;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #16a085; /* رأس الجدول بلون أخضر */
+    color: #fff;
+    font-weight: bold;
+}
+
+tfoot td {
+    background-color: #f1c40f; /* صف المجموع */
+    font-weight: bold;
+}
+
+/* الفيديو */
+video {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #2c3e50;
+    border-radius: 10px;
+}
+
+/* الصور التفاعلية */
+img[usemap] {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #16a085;
+    border-radius: 10px;
+}
+
+/* الروابط داخل الفورم أو الصفحة */
+a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

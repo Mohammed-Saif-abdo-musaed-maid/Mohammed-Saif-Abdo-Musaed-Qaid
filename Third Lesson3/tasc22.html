@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الدورات التدريبية في البرمجة</title>
+    <style>
+        /* 1. Background-Color & Background-Image */
+        body {
+            background-color: #f5f7fa; /* لون خلفية احتياطي */
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); /* تدرج لوني */
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 2. Font & Text */
+        h1, h2 {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* 3. Color */
+        form, table {
+            background-color: white;
+            color: #34495e;
+        }
+
+        /* 4. Border */
+        form {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            border: 2px solid #3498db;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+        }
+
+        /* 5. Padding & Margin */
+        form {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        table {
+            margin: 30px auto;
+            width: 95%;
+        }
+
+        th, td {
+            padding: 12px;
+        }
+
+        /* 6. تنسيقات خاصة */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(52, 152, 219, 0.75), rgba(0,0,0,0));
+            margin: 40px 0;
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        input[type="submit"], 
+        input[type="reset"],
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"]:hover, 
+        input[type="reset"]:hover,
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* 7. تنسيق الجدول */
+        thead {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        /* 8. تنسيق الصورة التفاعلية */
+        img[usemap] {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #3498db;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* 9. تنسيقات للعناصر التفاعلية */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        /* 10. تنسيقات للجوال */
+        @media (max-width: 768px) {
+            form {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">موقع الدورات التدريبية في البرمجة</h1>
+<hr>
+
+<!-- 1. FORM -->
+<h2>📌 التسجيل في الدورة</h2>
+<form action="submit.php" method="post">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">كلمة المرور:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{9,15}" placeholder="رقم من 9 إلى 15 رقم"><br><br>
+
+    <label for="age">العمر:</label>
+    <input type="number" id="age" name="age" min="10" max="80"><br><br>
+
+    <label for="file">رفع صورة الهوية:</label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <input type="checkbox" id="agree" name="agree" value="yes" required>
+    <label for="agree">أوافق على الشروط والأحكام</label><br><br>
+    <h2>نموذج تسجيل</h2>
+
+    <!-- قائمة اختيار select -->
+    <label for="country">اختر الدولة:</label>
+    <select id="country" name="country">
+        <option value="yemen" selected>اليمن</option>
+        <option value="saudi">السعودية</option>
+        <option value="egypt">مصر</option>
+        <option value="uae">الإمارات</option>
+    </select>
+    <br><br>
+
+    <!-- قائمة اقتراحات datalist -->
+    <label for="browser">اختر متصفحك المفضل:</label>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Microsoft Edge">
+        <option value="Safari">
+        <option value="Opera">
+    </datalist>
+    <br><br>
+
+    <!-- 2. RADIO -->
+    <h2>🌐 اختيار لغة التدريس</h2>
+    <input type="radio" id="arabic" name="language" value="arabic" checked>
+    <label for="arabic">العربية</label><br>
+
+    <input type="radio" id="english" name="language" value="english">
+    <label for="english">الإنجليزية</label><br>
+
+    <input type="radio" id="french" name="language" value="french">
+    <label for="french">الفرنسية</label><br>
+
+    <hr>
+    <!-- مربع نص متعدد الأسطر textarea -->
+    <label for="message">اكتب رسالتك:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40" placeholder="اكتب هنا..."></textarea>
+
+    <br><br>
+
+    <input type="submit" value="إرسال">
+    <input type="reset" value="مسح">
+    <button id="edit">تعديل</button>
+    <button id="cancel">إلغاء</button>
+    <button id="print">طباعة</button>
+</form>
+
+<hr>
+
+<h2>📅 جدول الدورات</h2>
+<table border="2" style="width:100%; text-align:center; border-collapse: collapse;" summary="جدول يوضح مواعيد، أسعار، أماكن، وعدد المقاعد ولغات التدريس للدورات التدريبية." Cellpadding="10" Cellspacing="5" align="center">
+  <caption><b>مواعيد وأسعار الدورات التدريبية مع تفاصيل إضافية</b></caption>
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th scope="col">رقم</th>
+      <th scope="col">اسم الدورة</th>
+      <th scope="col">المدة</th>
+      <th scope="col">السعر</th>
+      <th scope="col">المكان</th>
+      <th scope="col">المدينة</th>
+      <th scope="col">عدد المقاعد</th>
+      <th scope="col">تاريخ البدء</th>
+      <th scope="col">لغات التدريس</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>HTML & CSS</td>
+      <td>4 أسابيع</td>
+      <td>$50</td>
+      <td>اليمن</td>
+      <td>صنعاء</td>
+      <td>20</td>
+      <td>2025-09-01</td>
+      <td>العربية، الإنجليزية</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>JavaScript</td>
+      <td>6 أسابيع</td>
+      <td>$70</td>
+      <td>السعودية</td>
+      <td>الرياض</td>
+      <td>15</td>
+      <td>2025-09-15</td>
+      <td>العربية</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Python Basics</td>
+      <td>8 أسابيع</td>
+      <td>$90</td>
+      <td>مصر</td>
+      <td>القاهرة</td>
+      <td>25</td>
+      <td>2025-10-01</td>
+      <td>الإنجليزية</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>React JS</td>
+      <td>5 أسابيع</td>
+      <td>$100</td>
+      <td>الإمارات</td>
+      <td>دبي</td>
+      <td>18</td>
+      <td>2025-10-10</td>
+      <td>العربية، الإنجليزية، الفرنسية</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>PHP & MySQL</td>
+      <td>7 أسابيع</td>
+      <td>$80</td>
+      <td>الأردن</td>
+      <td>عمان</td>
+      <td>22</td>
+      <td>2025-11-01</td>
+      <td>العربية</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr style="background-color: #f9f9f9;">
+      <td colspan="6" style="text-align:left;"><strong>مجموع المقاعد المتاحة</strong></td>
+      <td><strong>100</strong></td>
+      <td colspan="2"></td>
+    </tr>
+  </tfoot>
+</table>
+
+<!-- 4. VIDEO -->
+<h2>🎥 فيديو تعريفي عن الدورات</h2>
+<video width="480" height="270" controls poster="language.png" muted loop>
+    <source src="Video  2.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو
+</video>
+
+<hr>
+
+<!-- 5. MAP -->
+<h2>📍 موقع مركز التدريب</h2>
+<img src="imgmap.png" alt="خريطة مركز التدريب" usemap="#trainingMap" width="500" height="300" loading="lazy" style="border: 1px solid #ccc;" title="انقر على الخريطة للتنقل">
+
+<map name="trainingMap">
+    <area shape="rect" coords="0,0,250,250" href="https://www.google.com/maps?q=training+center" alt="الموقع على الخريطة" target="_blank" rel="noopener noreferrer" title="اذهب إلى موقع مركز التدريب على خرائط جوجل" tabindex="0">
+    <area shape="circle" coords="300,150,50" href="https://www.example.com/info" alt="معلومات إضافية" target="_blank" rel="noopener noreferrer" title="معلومات إضافية عن المركز" tabindex="0">
+    <area shape="poly" coords="350,50,400,50,420,100,370,120" href="https://www.example.com/contact" alt="اتصل بنا" target="_blank" rel="noopener noreferrer" title="صفحة الاتصال" tabindex="0">
+</map>
+</body>
+</html>

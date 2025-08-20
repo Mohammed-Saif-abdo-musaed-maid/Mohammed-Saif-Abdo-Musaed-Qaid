@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التطييق الثالث </title>
+</head>
+<body dir="rtl">
+    <h1>Table</h1>
+
+  <table border="2" style="width:100%">
+    <caption><h2>  Monthly Savinge Report</h2>
+      
+    </caption>
+<thead>
+    <tr>
+       
+    
+<th>الرقم</th>
+<th>الإسم</th>
+<th>العمر</th>
+<th>المؤهل الدراسي</th>
+<th>الدولة</th>
+<th colspan="2">العنوان</th>
+</tr>
+ <tr>
+    </thead>   
+    
+
+<tbody>
+    <div>
+    <tr>
+ <td>1</td>
+ <td>محمد سيف عبده مسعد قايد </td>
+    
+<td>20</td>
+<td>بكالوريوس</td>
+<td>اليمن</td>
+<td>اب</td>
+<td>السبل</td>
+</tr>
+</div>
+<div>
+    <tr>
+ <td>2</td>
+ <td>علي احمد صالح عبدالله </td>
+    
+<td>2</td>
+<td>ماجستير</td>
+
+<td>السعودية</td>
+<td>الرياض</td>
+<td>الدمنة</td>
+</tr>
+</div>
+<div>
+    <tr>
+ <td>3</td>
+ <td>حامد عمار عبده مسعد </td>
+    
+<td>18</td>
+<td>بكالوريوس</td>
+<td>اليمن</td>
+<td>اب</td>
+<td>الظهار</td>
+</tr>
+</div>
+<div>
+    <tr>
+ <td>4</td>
+ <td>خالد عبدالله محمد المقبلي</td>
+    
+<td>30</td>
+<td>بكالوريوس</td>
+<td>اليمن</td>
+<td>ذمار</td>
+<td>بيت الكوماني</td>
+</tr>
+</div>
+<div>
+    <tr>
+ <td>5</td>
+ <td>احمد محمد احمد الشهاب </td>
+    
+<td>20</td>
+<td>بكالوريوس</td>
+<td>/td>
+<td>تعز</td>
+<td>الجعاشنة</td>
+</tr>
+</div>
+<div>
+    <tr>
+ <td>6</td>
+ <td>سارة عبدة علي محمد الكوماني </td>
+    
+<td>32</td>
+<td>بكالوريوس</td>
+<td>اليمن</td>
+<td>ذمار</td>
+<td>الكولة td>
+</tr>
+</div>
+<div>
+
+
+
+<!-- <tr>
+   <td>februry
+</td>
+<td>$1000</td>
+<td>$5000</td>
+<td>$6000</td>
+</tr>
+<tr>
+    <td>march</td>
+    <td>$11000</td>
+    <td>$869423</td>
+    <td>$1500</td>
+</tr>
+</tbody>
+<tfoot>
+    <tr>
+        <td>
+            <strong>Total</strong>
+        </td>
+<td>$3300</td>
+<td>$1350</td>
+<td>$16950</td>
+    </tr> -->
+    
+</tfoot>
+  </table>  
+ <br>
+<br>
+<hr>
+
+<a href="lessson3.html" target="_top">رابط موقع ويب </a>
+<h1>Audio</h1>
+<br>
+<audio controls loop autoplay muted preload="metadata">
+    <source src="001.mp3" type="audio/mp3">
+    <source src="001.wav" type="audio/wav">
+    <source src="001.ogg" type="audio/ogg">
+
+</audio>
+<br>
+<br>
+<hr>
+<H1>Video</H1>
+<br>
+<video width="480" height="270" controls muted loop poster="IMG_4163.JPG">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+
+</video>
+<br>
+<br>
+<hr>
+<h1>Map</h1>
+<br>
+<img src="laptop.jpg" alt="Example" usemap="#mapName">
+<map name="mapName">
+    <area shape="default" rect="x1,y1,x2,y2" href="lessson3.html" alt="Description">
+    <area shape="circle" coords="x,y,radius" href="lesson33.html" alt="Description2">
+
+</map>
+<br>
+<br>
+<hr>
+<h1>Form</h1>
+<br>
+<form action="submit.php" method="post">
+    <label for="username"> اسم المستخدم: </label>
+    <input type="text" id="username" name="username" required >
+    <br>
+<br>
+<label for="email">البريد الالكتروني:</label>
+<input type="email" id="email" name="email" rquired>
+<br>
+<br>
+<label for="confirm_password">تأكيد كلمة المرور:</label>
+<input type="password" id="confirm_password" name="confirm_password">
+<br>
+<br>
+<label for="phone">رقم الهاتف:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{9,15}" placeholder="رقم من 9 الى 15 رقم">
+<br>
+<label for="age">العمر:</label>
+<input type="number" id="age" name="age" min="1" max="120">
+<br><br>
+<label for="gender">
+الجنس:
+</label>
+<select id="gender" name="gender" >
+    <option value="male">ذكر:</option>
+    <option value="female">إنثى:</option>
+</select>
+<br><br>
+<label>الهوابات:</label>
+<br>
+<input type="checkbox" id="sports" name="hobbies[]" value="الرياضة">
+<br><br>
+<input type="checkbox" id="reading"
+name="hobbies[]"
+value="القراءة">
+<label for="reading">القراءة</label>
+
+
+<br>
+<br>
+<label>اللفة المفضلة:</label>
+<input type="radio" id="arabic" checked>
+<label for="arabic">العربية</label>
+<br>
+<input type="radio" id="english" checked>
+<label for="english">الإنجليزية</label>
+<br>
+<br>
+<h2>نموذج تسجيل</h2>
+
+<form action="#" method="post">
+
+    <!-- قائمة اختيار select -->
+    <label for="country">اختر الدولة:</label>
+    <select id="country" name="country">
+        <option value="yemen" selected>اليمن</option>
+        <option value="saudi">السعودية</option>
+        <option value="egypt">مصر</option>
+        <option value="uae">الإمارات</option>
+    </select>
+    <br><br>
+
+    <!-- قائمة اقتراحات datalist -->
+    <label for="browser">اختر متصفحك المفضل:</label>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Microsoft Edge">
+        <option value="Safari">
+        <option value="Opera">
+    </datalist>
+    <br><br>
+
+   
+<label for="bio">نبذة عنك :</label>
+<textarea id="bio" name="bio" rows="4" cols="40">
+
+</textarea>
+<br>
+<label for="file">ملف:</label>
+<input type="file" id="file" name="file">
+<br>
+<br> 
+<input type="submit" value="إرسال" >
+<input type="reset" value="مسح البيانات">
+<button id="edit">تعديل"</button>
+<button  id="cancel">إلغاء</button>
+<button id="print">طباعة</button>
+</form>
+
+
+
+
+
+
+</form>
+
+
+</body>
+</html>
